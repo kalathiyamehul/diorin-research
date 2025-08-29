@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Indian Jewelry Brands Database - Market Research Report 2025</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="../index.html" class="back-btn">← Back to Research Hub</a>
+            <h1>Perplexity Research 3 - Comprehensive Indian Jewelry Brands Database</h1>
+            <h2>Market Research Report 2025</h2>
+            <p class="subtitle">A comprehensive database of 50+ active jewelry brands operating in the Indian market, covering traditional heritage brands to modern digital-first companies.</p>
+        </header>
+
+        <div class="stats-panel" id="statsPanel">
+            <div class="stat-card">
+                <h3 id="totalBrands">50</h3>
+                <p>Total Brands</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="avgYear">1985</h3>
+                <p>Average Founded Year</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="topFocus">Traditional</h3>
+                <p>Top Market Focus</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="filteredCount">50</h3>
+                <p>Filtered Results</p>
+            </div>
+        </div>
+
+        <div class="filters-section">
+            <div class="search-container">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search brands by name...">
+            </div>
+            
+            <div class="filters-grid">
+                <div class="filter-group">
+                    <label for="yearFilter" class="form-label">Founded Year</label>
+                    <select id="yearFilter" class="form-control">
+                        <option value="">All Years</option>
+                        <option value="before-1950">Before 1950</option>
+                        <option value="1950-1970">1950-1970</option>
+                        <option value="1970-1990">1970-1990</option>
+                        <option value="1990-2010">1990-2010</option>
+                        <option value="2010+">2010+</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="focusFilter" class="form-label">Market Focus</label>
+                    <select id="focusFilter" class="form-control">
+                        <option value="">All Categories</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="valuationFilter" class="form-label">Valuation Range</label>
+                    <select id="valuationFilter" class="form-control">
+                        <option value="">All Valuations</option>
+                        <option value="under-10m">Under $10M</option>
+                        <option value="10m-50m">$10M-$50M</option>
+                        <option value="50m-200m">$50M-$200M</option>
+                        <option value="200m+">$200M+</option>
+                        <option value="public">Public Listed</option>
+                    </select>
+                </div>
+
+                <div class="filter-actions">
+                    <button id="resetFilters" class="btn btn--secondary">Reset Filters</button>
+                    <button id="exportBtn" class="btn btn--primary">Export CSV</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <div class="table-wrapper">
+                <table id="brandsTable" class="brands-table">
+                    <thead>
+                        <tr>
+                            <th data-sort="name" class="sortable">Brand Name <span class="sort-icon"></span></th>
+                            <th data-sort="website">Website</th>
+                            <th data-sort="year" class="sortable">Founded Year <span class="sort-icon"></span></th>
+                            <th data-sort="valuation" class="sortable">Valuation <span class="sort-icon"></span></th>
+                            <th data-sort="focus" class="sortable">Market Focus <span class="sort-icon"></span></th>
+                            <th data-sort="offerings">Unique Offerings</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Data will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="no-results" id="noResults" style="display: none;">
+            <h3>No brands found</h3>
+            <p>Try adjusting your search criteria or reset filters to view all brands.</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
