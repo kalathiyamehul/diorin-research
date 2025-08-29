@@ -10,8 +10,6 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         chatgpt: resolve(__dirname, 'pages/ChatGpt.html'),
         genspark: resolve(__dirname, 'pages/GenSpark.html'),
-        perplexity2: resolve(__dirname, 'pages/PerplexityResearch2.html'),
-        perplexity3: resolve(__dirname, 'pages/PerplexityResearch3.html')
       }
     }
   },
