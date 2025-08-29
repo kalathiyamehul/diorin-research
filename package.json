@@ -2,11 +2,11 @@
   "name": "indian-jewelry-research-hub",
   "version": "1.0.0",
   "description": "Comprehensive market analysis and brand directory for the Indian jewelry industry",
-  "main": "index.html",
+  "type": "module",
   "scripts": {
-    "dev": "python3 -m http.server 3000",
-    "build": "echo 'Static site - no build required'",
-    "start": "python3 -m http.server 8000"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "keywords": [
     "jewelry",
@@ -21,5 +21,8 @@
     "type": "git",
     "url": "https://github.com/username/indian-jewelry-research-hub.git"
   },
-  "homepage": "https://indian-jewelry-research-hub.vercel.app"
+  "homepage": "https://indian-jewelry-research-hub.vercel.app",
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
 }

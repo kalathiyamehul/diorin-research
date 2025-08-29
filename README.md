@@ -20,24 +20,49 @@ This research hub consolidates multiple studies and analyses of the Indian jewel
 ```
 /Research/
 ├── index.html                          # Main navigation hub
-├── ChatGpt.html                        # ChatGPT research data
-├── GenSpark.html                       # GenSpark analysis
-├── Perplexity Research 2/              # Interactive web app
-│   ├── index.html
-│   ├── app.js
-│   └── style.css
-├── Preplxicity Research one.zip/       # Categorization system
-│   ├── index.html
-│   ├── app.js
-│   └── style.css
+├── pages/                              # Research pages directory
+│   ├── ChatGpt.html                    # ChatGPT research data
+│   ├── GenSpark.html                   # GenSpark analysis
+│   ├── PerplexityResearch2.html        # Interactive web app
+│   ├── PerplexityResearch3.html        # Comprehensive database
+│   ├── app.js                          # JavaScript functionality
+│   ├── style.css                      # Shared styling
+│   └── *.csv                          # Data files
 ├── package.json                        # Project configuration
+├── vite.config.js                      # Vite configuration
 ├── vercel.json                         # Vercel deployment config
+├── .gitignore                          # Git ignore rules
 └── README.md                           # This file
 ```
 
-## 🚀 Deployment to Vercel
+## 🚀 Development & Deployment
 
-### Method 1: Vercel CLI (Recommended)
+### Local Development
+
+1. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+2. **Start development server**:
+   ```bash
+   npm run dev
+   ```
+   This will start Vite dev server at `http://localhost:3000`
+
+3. **Build for production**:
+   ```bash
+   npm run build
+   ```
+
+4. **Preview production build**:
+   ```bash
+   npm run preview
+   ```
+
+### Deployment to Vercel
+
+#### Method 1: Vercel CLI (Recommended)
 
 1. **Install Vercel CLI**:
    ```bash
@@ -63,13 +88,13 @@ This research hub consolidates multiple studies and analyses of the Indian jewel
    - Directory: `./` (current directory)
    - Override settings? `N`
 
-### Method 2: GitHub + Vercel Dashboard
+#### Method 2: GitHub + Vercel Dashboard
 
 1. **Create a GitHub repository**:
    ```bash
    git init
    git add .
-   git commit -m "Initial commit: Indian Jewelry Research Hub"
+   git commit -m "Initial commit: Indian Jewelry Research Hub with Vite"
    git branch -M main
    git remote add origin https://github.com/yourusername/indian-jewelry-research-hub.git
    git push -u origin main
@@ -79,31 +104,16 @@ This research hub consolidates multiple studies and analyses of the Indian jewel
    - Go to [vercel.com](https://vercel.com)
    - Click "New Project"
    - Import your GitHub repository
+   - Vercel will automatically detect Vite and use the correct build settings
    - Deploy with default settings
 
-## 🛠️ Local Development
+## 🛠️ Technology Stack
 
-1. **Clone or navigate to the project**:
-   ```bash
-   cd /Users/mehulkalathiya/Diorin/Research
-   ```
-
-2. **Start a local server**:
-   ```bash
-   # Using Python 3
-   python3 -m http.server 3000
-   
-   # Or using Node.js (if you have it)
-   npx serve .
-   
-   # Or using PHP
-   php -S localhost:3000
-   ```
-
-3. **Open in browser**:
-   ```
-   http://localhost:3000
-   ```
+- **Build Tool**: Vite 5.0+ for fast development and optimized builds
+- **Frontend**: Vanilla HTML, CSS, and JavaScript
+- **Styling**: CSS Custom Properties with dark/light theme support
+- **Deployment**: Vercel with automatic Vite detection
+- **Package Manager**: npm
 
 ## 📊 Features
 
