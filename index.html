@@ -6,14 +6,14 @@
     <title>Indian Jewelry Research Hub</title>
     <style>
         :root {
-            --bg: #0c1021;
-            --card: #11162a;
-            --text: #e7ecff;
-            --muted: #aab3d4;
-            --accent: #6bc0ff;
-            --accent2: #ffb86b;
-            --good: #4ade80;
-            --border: #1c2241;
+            --bg: #ffffff;
+            --card: #f8fafc;
+            --text: #1e293b;
+            --muted: #64748b;
+            --accent: #3b82f6;
+            --accent2: #f59e0b;
+            --good: #10b981;
+            --border: #e2e8f0;
         }
 
         * {
@@ -40,7 +40,7 @@
             text-align: center;
             margin-bottom: 3rem;
             padding: 2rem;
-            background: linear-gradient(120deg, #101633 0%, #11162a 50%, #0c1021 100%);
+            background: linear-gradient(120deg, #f1f5f9 0%, #f8fafc 50%, #ffffff 100%);
             border-radius: 12px;
             border: 1px solid var(--border);
         }
@@ -48,10 +48,7 @@
         h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, var(--accent), var(--accent2));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--text);
         }
 
         .subtitle {
@@ -102,7 +99,7 @@
         .research-card:hover {
             transform: translateY(-4px);
             border-color: var(--accent);
-            box-shadow: 0 8px 32px rgba(107, 192, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(59, 130, 246, 0.15);
         }
 
         .research-card::before {
@@ -178,7 +175,7 @@
         }
 
         .btn-primary:hover {
-            background: #5ab0ef;
+            background: #2563eb;
             transform: translateY(-1px);
         }
 
@@ -201,6 +198,44 @@
             color: var(--muted);
         }
 
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .tab {
+            padding: 1rem 2rem;
+            background: transparent;
+            border: none;
+            color: var(--muted);
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab:hover {
+            color: var(--accent);
+            background: rgba(59, 130, 246, 0.05);
+        }
+
+        .tab.active {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+            background: rgba(59, 130, 246, 0.1);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 1rem;
@@ -221,6 +256,16 @@
 
             .card-actions {
                 flex-direction: column;
+            }
+
+            .tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .tab {
+                width: 100%;
+                text-align: center;
             }
         }
     </style>
@@ -246,7 +291,14 @@
             </div>
         </header>
 
-        <div class="research-grid">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab(event, 'research-tab')">Research Projects</button>
+            <button class="tab" onclick="switchTab(event, 'product-research-tab')">Product Research</button>
+            <button class="tab" onclick="switchTab(event, 'product-list-tab')">Product List</button>
+        </div>
+        
+        <div id="research-tab" class="tab-content active">
+            <div class="research-grid">
             <div class="research-card">
                 <div class="card-header">
                     <div class="card-icon" style="background: linear-gradient(135deg, #ff6b6b, #ff8e8e);">
@@ -330,6 +382,140 @@
                     </a>
                 </div>
             </div>
+            </div>
+        </div>
+        
+        <div id="product-research-tab" class="tab-content">
+            <div class="section-header">
+                <h2 style="text-align: center; margin-bottom: 1rem; color: var(--accent); font-size: 2rem;">🛍️ Product Research
+                </h2>
+                <p style="text-align: center; margin-bottom: 2rem; color: var(--muted);">AI-powered product research and
+                    analysis tools</p>
+            </div>
+        
+            <div class="research-grid">
+                <div class="research-card">
+                    <div class="card-header">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #6bc0ff, #8dd3ff);">
+                            ⚡
+                        </div>
+                        <h3 class="card-title">GenSpark Product Analysis</h3>
+                    </div>
+                    <p class="card-description">
+                        Advanced AI-powered product research and market analysis with comprehensive insights and
+                        recommendations.
+                    </p>
+                    <div class="card-meta">
+                        <span>Platform: GenSpark AI</span>
+                        <span>Focus: Product Intelligence</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://www.genspark.ai/spark?id=77e84300-8784-413d-a410-6a4f2fb11161" class="btn btn-primary"
+                            target="_blank">
+                            🚀 Launch GenSpark
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="research-card">
+                    <div class="card-header">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #ffb86b, #ffd93d);">
+                            🔍
+                        </div>
+                        <h3 class="card-title">Perplexity Product Research</h3>
+                    </div>
+                    <p class="card-description">
+                        Knowledge-driven product research with real-time information and comprehensive market intelligence.
+                    </p>
+                    <div class="card-meta">
+                        <span>Platform: Perplexity AI</span>
+                        <span>Focus: Knowledge Research</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://www.perplexity.ai/search/you-are-a-knowledgeable-produc-29NAQc6WQT2X3qCzXh9MBw"
+                            class="btn btn-primary" target="_blank">
+                            🧠 Open Perplexity
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="research-card">
+                    <div class="card-header">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #ff6b6b, #ff8e8e);">
+                            🤖
+                        </div>
+                        <h3 class="card-title">ChatGPT Product Analysis</h3>
+                    </div>
+                    <p class="card-description">
+                        Conversational AI assistant for detailed product analysis, market research, and strategic
+                        recommendations.
+                    </p>
+                    <div class="card-meta">
+                        <span>Platform: ChatGPT</span>
+                        <span>Focus: Conversational AI</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://chatgpt.com/share/68b201aa-c958-8003-9ef8-7b50dce3ff44" class="btn btn-primary"
+                            target="_blank">
+                            💬 Chat with GPT
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="product-list-tab" class="tab-content">
+            <div class="section-header">
+                <h2 style="text-align: center; margin-bottom: 1rem; color: var(--accent); font-size: 2rem;">📋 Product List</h2>
+                <p style="text-align: center; margin-bottom: 2rem; color: var(--muted);">Quick access to product research platforms</p>
+            </div>
+        
+            <div class="research-grid">
+                    <div class="research-card">
+                        <div class="card-header">
+                            <div class="card-icon" style="background: linear-gradient(135deg, #6bc0ff, #8dd3ff);">
+                                ⚡
+                            </div>
+                            <h3 class="card-title">GenSpark</h3>
+                        </div>
+                        <p class="card-description">
+                            Access GenSpark platform for advanced AI-powered research and analysis capabilities.
+                        </p>
+                        <div class="card-meta">
+                            <span>Platform: GenSpark</span>
+                            <span>Type: AI Research</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="https://www.genspark.ai/spark?id=c7379af6-e1a8-469b-a074-370bd1655583"
+                                class="btn btn-primary" target="_blank">
+                                🚀 Open GenSpark
+                            </a>
+                        </div>
+                    </div>
+        
+                    <div class="research-card">
+                        <div class="card-header">
+                            <div class="card-icon" style="background: linear-gradient(135deg, #ffb86b, #ffd93d);">
+                                🔍
+                            </div>
+                            <h3 class="card-title">Perplexity</h3>
+                        </div>
+                        <p class="card-description">
+                            Access Perplexity AI for knowledge-driven research with real-time information and insights.
+                        </p>
+                        <div class="card-meta">
+                            <span>Platform: Perplexity</span>
+                            <span>Type: Knowledge AI</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="https://www.perplexity.ai/apps/ec71f17b-5e7e-41e3-8a21-94940b93821f"
+                                class="btn btn-primary" target="_blank">
+                                🧠 Open Perplexity
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <footer class="footer">
@@ -337,5 +523,27 @@
             <p style="margin-top: 0.5rem; font-size: 0.85rem;">Comprehensive research on the Indian jewelry market landscape</p>
         </footer>
     </div>
+
+    <script>
+        function switchTab(evt, tabName) {
+            var i, tabcontent, tabs;
+            
+            // Hide all tab content
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            
+            // Remove active class from all tabs
+            tabs = document.getElementsByClassName("tab");
+            for (i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove("active");
+            }
+            
+            // Show the selected tab content and mark the button as active
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
 </body>
 </html>
