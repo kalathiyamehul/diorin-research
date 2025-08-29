@@ -1,10 +1,10 @@
-# Indian Jewelry Research Hub
+# Jewelry Research Hub
 
 A comprehensive market analysis and brand directory for the Indian jewelry industry, featuring multiple research projects and interactive databases.
 
 ## 🚀 Live Demo
 
-Visit the deployed application: [Indian Jewelry Research Hub](https://your-vercel-url.vercel.app)
+Visit the deployed application: [Jewelry Research Hub](https://your-vercel-url.vercel.app)
 
 ## 📋 Project Overview
 
@@ -94,7 +94,7 @@ This research hub consolidates multiple studies and analyses of the Indian jewel
    ```bash
    git init
    git add .
-   git commit -m "Initial commit: Indian Jewelry Research Hub with Vite"
+   git commit -m "Initial commit: Jewelry Research Hub with Vite"
    git branch -M main
    git remote add origin https://github.com/yourusername/indian-jewelry-research-hub.git
    git push -u origin main
